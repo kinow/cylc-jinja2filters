@@ -1,0 +1,50 @@
+
+# python bytecode
+*.py[cod]
+__pycache__/
+
+# - Command reference from called script 'custom/make-commands.sh'.
+doc/src/appendices/command-ref.rst
+
+# vim backup files
+*.swp
+
+# emacs backup files
+*~
+
+# ordereddict-0.4.5 build 
+ext/ordereddict-0.4.5/build
+
+# global configuration and processed configuration
+etc/job-init-env.sh
+etc/global.rc
+etc/global-tests.rc
+
+# processed suite definitions
+*.rc.processed
+
+# suite passphrases
+passphrase
+
+# profiling
+.profiling
+
+# coverage
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+
+# distutils files
+build
+dist
+MANIFEST
+cylc.egg-info
+.eggs
+
+# virtualenv
+venv
+
+# mypy
+.mypy_cache/
+

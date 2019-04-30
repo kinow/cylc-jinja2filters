@@ -13,28 +13,20 @@
 #
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
-"""Provides a Jinja2 filter for padding strings to a set number of chars."""
+"""Provides a Jinja2 filter for formatting ISO8601 datetime strings."""
 
 
-def pad(value, length, fillchar=' '):
-    """Pads a string to some length with a fill character
-
-    Args:
-        value (str): The string to pad.
-        length (int/str): The length for the returned string.
-        fillchar (str - optional): The character to fill in surplus space
-            (space by default).
-
-    Returns:
-        str: value padded to the left with fillchar to length length.
+def reverse_upper(text: str):
+    """Format an iso8601 datetime string using an strftime string.
 
     Examples:
-        >>> pad('13', 3, '0')
-        '013'
-        >>> pad('foo', 6)
-        '   foo'
-        >>> pad('foo', 2)
-        'foo'
+        >>> # Basic usage.
+        >>> reverse_upper('how is it?')
+        '?TI SI WOH'
 
+    :param text: text
+    :type text: str
+    :return: same text reversed and in upper letters
+    :rtype: str
     """
-    return str(value).rjust(int(length), str(fillchar))
+    return text[::-1].upper()

@@ -13,12 +13,10 @@
 #
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
-"""Provides a Jinja2 filter for formatting ISO8601 datetime strings."""
 
 
 def reverse_upper(text: str):
-    """Format an iso8601 datetime string using an strftime string.
-
+    """
     Examples:
         >>> # Basic usage.
         >>> reverse_upper('how is it?')

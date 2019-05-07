@@ -1,5 +1,5 @@
-from setuptools import setup, find_packages
+from setuptools import setup
 
 setup(
-    packages=find_packages()
+    packages=["cylc.jinja.filters", "cylc.jinja.globals", "cylc.jinja.tests"]
 )

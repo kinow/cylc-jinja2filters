@@ -1,5 +1,9 @@
 from setuptools import setup
 
 setup(
-    packages=["cylc.jinja.filters", "cylc.jinja.globals", "cylc.jinja.tests"]
+    packages=[
+        "cylc.flow.jinja.filters",
+        "cylc.flow.jinja.globals",
+        "cylc.flow.jinja.tests"
+    ]
 )

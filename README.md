@@ -14,3 +14,24 @@ $ pip install .
 # For an editable install
 $ pip install -e .
 ```
+
+## Example suite
+
+```bash
+#!Jinja2
+
+[cylc]
+    UTC mode = True
+
+[scheduling]
+    initial cycle point = 01231212T1212
+    [[dependencies]]
+        [[[R1]]]
+            graph = reverse_upper
+[runtime]
+    [[reverse_upper]]
+        script = """test "$TEST_1" == 'OLUAP OAS'"""
+        [[[environment]]]
+            TEST_1 = {{ 'sao paulo' | reverse_upper }}
+
+```
